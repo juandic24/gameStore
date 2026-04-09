@@ -69,7 +69,3 @@ The API uses JWT to authenticate users.
 3. Restore dependencies
 4. Run the API
 
-```bash
-dotnet restore
-dotnet ef database update
-dotnet run
