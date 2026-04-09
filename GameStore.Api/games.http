@@ -1,0 +1,66 @@
+@host = http://localhost:5110
+@token = TOKEN_EXAMPLE
+
+### Register
+POST {{host}}/auth/register
+Content-Type: application/json
+
+{
+  "email": "admin@gamestore.com",
+  "password": "Admin123!"
+}
+
+### Login
+POST {{host}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@gamestore.com",
+  "password": "Admin123!"
+}
+
+### Get games public
+GET {{host}}/games
+
+
+### Get games id
+
+GET {{host}}/games/1
+
+### Create game admin only
+POST {{host}}/games
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "Hades",
+  "genreId": 2,
+  "description": "Roguelike de accion en el inframundo.",
+  "platforms": ["PC", "Switch"],
+  "stock": 10,
+  "price": 29.99,
+  "releaseDate": "2020-09-17"
+}
+
+### Update game admin only
+PUT {{host}}/games/1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "Hades Updated",
+  "genreId": 2,
+  "description": "Version actualizada.",
+  "platforms": ["PC", "Switch"],
+  "stock": 15,
+  "price": 24.99,
+  "releaseDate": "2020-09-17"
+}
+
+### Delete game admin only
+DELETE {{host}}/games/1
+Authorization: Bearer {{token}}
+
+###
+
+GET {{host}}/genres

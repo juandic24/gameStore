@@ -1,0 +1,31 @@
+# Build output
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# IDE folders
+.vs/
+.vscode/
+
+# Rider
+.idea/
+
+# Logs
+*.log
+
+# SQLite local database files
+*.db
+*.db-shm
+*.db-wal
+
+# ASP.NET local secrets / env overrides if added later
+secrets.json
+
+# OS generated files
+.DS_Store
+Thumbs.db
